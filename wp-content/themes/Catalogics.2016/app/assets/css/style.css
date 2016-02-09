@@ -1,0 +1,271 @@
+/*
+  Easy Box Model Imports
+  Last update: 01.06.15
+  Author: @MadeByGus - G. Andres Ibarra yo@soygus.com
+	
+	Optional without Grunt:
+  sass --watch src/scss/style.scss:app/assets/css/style.css
+*/
+/*
+  EBM Variables
+*/
+/* 
+  Text in rem units
+  Used in text-control partials
+*/
+/* PROJECT ESPECIFIC FONTS */
+@font-face {
+  font-family: 'DINRegular';
+  src: url("../fonts/DINRegular.eot?uawag0");
+  src: url("../fonts/DINRegular.eot?#iefixuawag0") format("embedded-opentype"), url("../fonts/DINRegular.woff?uawag0") format("woff"), url("../fonts/DINRegular.ttf?uawag0") format("truetype"), url("../fonts/DINRegular.svg?uawag0#DINRegular") format("svg");
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+@font-face {
+  font-family: 'DINProLight';
+  src: url("../fonts/DINProLight.eot?uawag0");
+  src: url("../fonts/DINProLight.eot?#iefixuawag0") format("embedded-opentype"), url("../fonts/DINProLight.woff?uawag0") format("woff"), url("../fonts/DINProLight.ttf?uawag0") format("truetype"), url("../fonts/DINProLight.svg?uawag0#DINProLight") format("svg");
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+@font-face {
+  font-family: 'DINMedium';
+  src: url("../fonts/DINMedium.eot?uawag0");
+  src: url("../fonts/DINMedium.eot?#iefixuawag0") format("embedded-opentype"), url("../fonts/DINMedium.woff?uawag0") format("woff"), url("../fonts/DINMedium.ttf?uawag0") format("truetype"), url("../fonts/DINMedium.svg?uawag0#DINMedium") format("svg");
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.light {
+  font-family: "DINProLight", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.book {
+  font-family: "DINRegular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.medium {
+  font-family: "DINMedium", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/*
+	EBM:Ref
+	Flexbox
+*/
+/*
+	EBM Global styles
+*/
+html::-webkit-scrollbar {
+  display: none;
+}
+
+.site-wrapper,
+.site-content {
+  overflow-x: hidden;
+  position: relative;
+}
+
+.header {
+  border-bottom: 1px solid #ef3d31;
+  background-color: #F04A3F;
+}
+.header h1, .header h2, .header h3, .header h4, .header h5, .header h6,
+.header .h1, .header .h2, .header .h3, .header .h4, .header .h5, .header .h6,
+.header h1, .header h2, .header h3, .header h4, .header h5, .header h6, .header p, .header span, .header a, .header em, .header i, .header strong, .header li {
+  margin: 0;
+}
+.header .header-left,
+.header .header-center,
+.header .header-right {
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  box-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  box-orient: vertical;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  box-direction: normal;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 70px;
+}
+.header .header-center {
+  text-align: center;
+}
+.header .header-right {
+  text-align: right;
+}
+
+#menu-main-menu {
+  list-style: none;
+  margin-bottom: 0;
+  padding-left: 0;
+  margin-top: 0;
+}
+#menu-main-menu li {
+  display: inline-block;
+}
+#menu-main-menu li:hover, #menu-main-menu li.current-menu-item {
+  cursor: pointer;
+}
+#menu-main-menu li:hover a, #menu-main-menu li.current-menu-item a {
+  color: #D8D8D8;
+}
+#menu-main-menu li a {
+  font-family: "DINMedium", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.25rem;
+  color: white;
+}
+
+.logo img {
+  width: 180px;
+  height: auto;
+}
+
+.section {
+  padding: 2.625rem 0;
+}
+.section .title {
+  margin-bottom: 2.625rem;
+}
+
+.services-block {
+  padding: 2.625rem 0;
+}
+.services-block .left, .services-block .right {
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  box-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  box-orient: vertical;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  box-direction: normal;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+}
+.services-block .left img, .services-block .right img {
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.services-block .left img {
+  -webkit-transform: translateX(-150%);
+  -moz-transform: translateX(-150%);
+  -ms-transform: translateX(-150%);
+  -o-transform: translateX(-150%);
+  transform: translateX(-150%);
+}
+.services-block .right img {
+  -webkit-transform: translateX(100%);
+  -moz-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  -o-transform: translateX(100%);
+  transform: translateX(100%);
+}
+.services-block img {
+  width: 910px;
+  height: 680px;
+}
+.services-block .img-slide-container {
+  position: relative;
+}
+.services-block.animate .left img {
+  -webkit-transform: translateX(-60%);
+  -moz-transform: translateX(-60%);
+  -ms-transform: translateX(-60%);
+  -o-transform: translateX(-60%);
+  transform: translateX(-60%);
+}
+.services-block.animate .right img {
+  -webkit-transform: translateX(5%);
+  -moz-transform: translateX(5%);
+  -ms-transform: translateX(5%);
+  -o-transform: translateX(5%);
+  transform: translateX(5%);
+}
+
+.footer {
+  background-color: #0D0D0D;
+}
+.footer h1, .footer h2, .footer h3, .footer h4, .footer h5, .footer h6,
+.footer .h1, .footer .h2, .footer .h3, .footer .h4, .footer .h5, .footer .h6,
+.footer h1, .footer h2, .footer h3, .footer h4, .footer h5, .footer h6, .footer p, .footer span, .footer a, .footer em, .footer i, .footer strong, .footer li {
+  margin: 0;
+}
+.footer .row > div {
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  box-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  box-orient: vertical;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  box-direction: normal;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 70px;
+}
+
+/*
+	Media queries
+*/
+@media only screen and (max-width: 62em) {
+  .site-content .services-block .left, .site-content .services-block .right {
+    padding: 2.625rem;
+    min-height: auto;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

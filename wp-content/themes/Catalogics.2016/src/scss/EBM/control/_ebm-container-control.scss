@@ -1,0 +1,33 @@
+/*
+	Containers-custom
+*/
+.container-fluid {
+	width: 100%;
+}
+.container-xs, 
+.container-sm {
+	@include make-container();
+}
+.container-xs {
+	max-width: $container-xs;
+}
+.container-sm {
+	max-width: $container-sm;
+}	
+
+@media #{$md-down} {
+	.container-xs,
+	.container-sm {
+		max-width: 100%;
+		min-width: 100%;
+	}
+}
+
+.ebm-row {
+	@extend .row;
+	width: 100%;
+}
+.ebm-clearfix {
+	@extend .clearfix;
+	width: 100%;
+}
