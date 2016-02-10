@@ -18,6 +18,7 @@ body {}
 $header-height-control: 70px;
 .header {
 	@include normalize-text;
+	@include position-fixed-top(1000);
 	border-bottom: 1px solid darken($brand-primary, 3%);
 	background-color: $brand-primary;
 	.header-left,

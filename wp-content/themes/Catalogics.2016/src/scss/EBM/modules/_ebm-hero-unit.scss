@@ -1,7 +1,7 @@
 /* 
 	Hero unit
 */
-$hero-unit-height-control: 490px;
+$hero-unit-height-control: 70vh;
 .hero-unit {
 	@include bg-img-block;
 	min-height: $hero-unit-height-control;

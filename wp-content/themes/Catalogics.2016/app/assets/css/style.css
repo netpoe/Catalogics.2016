@@ -68,6 +68,13 @@ html::-webkit-scrollbar {
 }
 
 .header {
+  z-index: 1000;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
   border-bottom: 1px solid #ef3d31;
   background-color: #F04A3F;
 }

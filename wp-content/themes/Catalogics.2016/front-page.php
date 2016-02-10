@@ -22,7 +22,7 @@
 					<p>Catalogics colabora contigo para que promuevas y vendas tus productos en línea.</p>
 					<div class="mt-21">
 						<h5>Servicios</h5>
-						<span class="icon-chevron-down animated infinite bounceIn"></span>
+						<span class="icon-chevron-down animated infinite bounce ad-24 block"></span>
 					</div>
 				</div>
 			</div>
