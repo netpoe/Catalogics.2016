@@ -115,3 +115,10 @@ wp-content/themes/Catalogics.2016/app/assets/icons/*.woff
 wp-content/themes/Catalogics.2016/HISTORY.md
 wp-content/themes/Catalogics.2016/OLDREADME.md
 
+# BUILD
+wp-content/themes/twentysixteen
+wp-content/themes/Catalogics.2016/src/
+wp-content/themes/Catalogics.2016/Gruntfile.js
+wp-content/themes/Catalogics.2016/bower.json
+wp-content/themes/Catalogics.2016/.bowerrc
+wp-content/themes/Catalogics.2016/package.json
